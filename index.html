@@ -3,26 +3,29 @@
 <head>
 <style>
     #logo {
-        display: block;
-        margin: 150px auto 0 200px;
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
     }
-    .nav ul {
+    #nav-top ul {
         text-align: right;
         list-style-type: none;
         padding: 0; 
     }
-    .nav li {
-        display: inline;
+    #nav-bottom ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
     }
-    #nav-bottom {
-        text-align: center;
+    #nav-top li, #nav-bottom li {
+        display: inline;
     }
 </style>
     <meta charset="UTF-8">
     <title>Google</title>
 </head>
 <body>
-    <div class="nav">
+    <div id="nav-top">
         <ul>
             <li><a href="#">Gmail</a></li>
             <li><a href="#">Images</a></li>
@@ -39,8 +42,8 @@
 
     </div>
 
-    <div class="nav">
-        <ul id="nav-bottom">
+    <div id="nav-bottom">
+        <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Advertising</a></li>
             <li><a href="#">Business</a></li>
