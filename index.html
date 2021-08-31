@@ -30,9 +30,9 @@
         border: none;
         border-radius: 5px;
         font-size: 14px;
-        color: rgb(113, 113, 116);
+        color: rgb(107, 107, 110);
         padding: 10px;
-        background-color:rgb(228, 226, 226)     
+        background-color:rgb(240, 239, 239)     
     }
     .between-buttons {
         width: 15px;
@@ -45,7 +45,17 @@
     #nav-top ul {
         text-align: right;
         list-style-type: none;
-        padding: 0; 
+        padding: 0;
+    }
+    #apps {
+        color:rgb(107, 107, 110);
+    }
+    #sign-in {
+        color: white;
+        border-radius: 3px;
+        background-color: #4284f5;
+        border: none;
+        padding: 7px 11px 7px 11px;
     }
     #nav-bottom ul {
         display: flex;
@@ -53,6 +63,7 @@
         justify-content: space-evenly;
     }
     #nav-top li, #nav-bottom li {
+        color: black;
         display: inline;
         font-size: 14px;
     }
@@ -65,8 +76,8 @@
         <ul>
             <li><a href="#">Gmail</a></li>
             <li><a href="#">Images</a></li>
-            <li><a href="#">logo</a></li>
-            <li><a href="#">photo</a></li>
+            <li><a href="#"><img id="apps" src="apps_black_24dp.svg"></a></li>
+            <li><button id="sign-in" type="button">Sign in</button></li>
         </ul>
     </div>
     
