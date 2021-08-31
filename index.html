@@ -2,6 +2,41 @@
 <html lang="en">
 <head>
 <style>
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+    .middle {
+        min-height: 100%;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 100%;
+    }   
+    .bar {
+        display: flex;
+        margin: 0 auto;
+        margin-top: 30px;
+        height: 40px;
+        border-radius: 25px;
+        width: 470px;
+        border: 1px solid rgb(204, 201, 201);
+    }
+    .buttons {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 200px;
+    }
+    #google-search, #lucky {
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        color: rgb(113, 113, 116);
+        padding: 10px;
+        background-color:rgb(228, 226, 226)     
+    }
+    .between-buttons {
+        width: 15px;
+    }
     #logo {
         display: flex;
         justify-content: center;
@@ -19,6 +54,7 @@
     }
     #nav-top li, #nav-bottom li {
         display: inline;
+        font-size: 14px;
     }
 </style>
     <meta charset="UTF-8">
@@ -34,24 +70,32 @@
         </ul>
     </div>
     
-    <div id="logo">
-        <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo">
-    </div>
-    
-    <div class="search-bar">
+    <div class="middle">
+        <div id="logo">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo">
+        </div>
+        
+        <div class="search-bar">
+            <input class="bar" type="text" title="Search">
+        </div>
 
-    </div>
+        <div class="buttons">
+            <button id="google-search" type="button">Google Search</button>
+            <div class="between-buttons"></div>
+            <button id="lucky" type="button">I'm Feeling Lucky</button>
+        </div>
 
-    <div id="nav-bottom">
-        <ul>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Advertising</a></li>
-            <li><a href="#">Business</a></li>
-            <li><a href="#">How Search works</a></li>
-            <li><a href="#">Privacy</a></li>
-            <li><a href="#">Terms</a></li>
-            <li><a href="#">Settings</a></li>
-        </ul>
-    </div>>
+        <div id="nav-bottom">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Advertising</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">How Search works</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>>
+    </div>
 </body>
 </html>
