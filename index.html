@@ -36,6 +36,10 @@
         padding: 10px 15px 10px 15px;
         background-color:rgb(240, 239, 239)     
     }
+    .between-top {
+        display: flex;
+        flex-grow: 1;
+    }
     .between-buttons {
         width: 15px;
     }
@@ -48,6 +52,8 @@
         justify-content: center;
         margin-top: 100px;
     }
+    .about,
+    .store,
     .gmail, 
     .images, 
     .nav-bottom li{
@@ -101,7 +107,7 @@
         font-size: 14px;
         color: rgb(95, 94, 94);
         text-decoration: none;
-    }
+    }   
 </style>
     <meta charset="UTF-8">
     <title>Google</title>
@@ -109,6 +115,9 @@
 <body>
     <div class="nav-top">
         <ul>
+            <li><a class="about" href="#">About</a></li>
+            <li><a class="store" href="#">Store</a></li>
+            <div class="between-top"></div>
             <li><a class="gmail" href="#">Gmail</a></li>
             <li><a class ="images" href="#">Images</a></li>
             <li><a href="#"><img id="apps" src="apps_black_24dp.svg"></a></li>
