@@ -4,7 +4,7 @@
 <style>
     html, body {
         width: 100%;
-        height: 100%;
+        height: 70%;
     }
     .middle {
         min-height: 100%;
@@ -24,58 +24,93 @@
     .buttons {
         display: flex;
         justify-content: center;
-        margin-bottom: 200px;
+        margin-bottom: 100px;
     }
-    #google-search, #lucky {
+    #google-search, 
+    #lucky {
+        margin-top: 30px;
         border: none;
         border-radius: 5px;
         font-size: 14px;
         color: rgb(107, 107, 110);
-        padding: 10px;
+        padding: 10px 15px 10px 15px;
         background-color:rgb(240, 239, 239)     
     }
     .between-buttons {
         width: 15px;
     }
+    .between-bottom {
+        display: flex;
+        flex-grow: 1;
+    }
     #logo {
         display: flex;
         justify-content: center;
-        margin-top: 150px;
+        margin-top: 100px;
     }
-    #nav-top ul {
-        text-align: right;
-        list-style-type: none;
-        padding: 0;
+    .gmail, 
+    .images, 
+    .nav-bottom li{
+        margin-top: 5px;
+        font-size: 12px;
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
     }
     #apps {
         color:rgb(107, 107, 110);
     }
     #sign-in {
         color: white;
+        margin-right: 20px;
         border-radius: 3px;
         background-color: #4284f5;
         border: none;
         padding: 7px 11px 7px 11px;
     }
-    #nav-bottom ul {
+    .nav-top ul {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .nav-top li {
+        margin: 5px 10px auto 10px;
+    }
+    .nav-bottom ul {
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
+        background-color: rgb(240, 236, 236);
+        padding: 10px 10px;
     }
-    #nav-top li, #nav-bottom li {
+    .nav-top li,
+    .nav-bottom li {
+        display: flex;
+        flex-direction:row;
         color: black;
-        display: inline;
+        font-size: 13px;
+    }
+    #advertising, 
+    #business, 
+    #hsw,
+    #privacy,
+    #terms,
+    #settings {
+        display: flex;
+        margin-left: 10px;
+        margin-right: 10px;
         font-size: 14px;
+        color: rgb(95, 94, 94);
+        text-decoration: none;
     }
 </style>
     <meta charset="UTF-8">
     <title>Google</title>
 </head>
 <body>
-    <div id="nav-top">
+    <div class="nav-top">
         <ul>
-            <li><a href="#">Gmail</a></li>
-            <li><a href="#">Images</a></li>
+            <li><a class="gmail" href="#">Gmail</a></li>
+            <li><a class ="images" href="#">Images</a></li>
             <li><a href="#"><img id="apps" src="apps_black_24dp.svg"></a></li>
             <li><button id="sign-in" type="button">Sign in</button></li>
         </ul>
@@ -96,17 +131,17 @@
             <button id="lucky" type="button">I'm Feeling Lucky</button>
         </div>
 
-        <div id="nav-bottom">
+        <div class="nav-bottom">
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Advertising</a></li>
-                <li><a href="#">Business</a></li>
-                <li><a href="#">How Search works</a></li>
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Settings</a></li>
+                <li><a id="advertising" href="#">Advertising</a></li>
+                <li><a id="business" href="#">Business</a></li>
+                <li><a id="hsw" href="#">How Search works</a></li>
+                <div class="between-bottom"></div>
+                <li><a id="privacy" href="#">Privacy</a></li>
+                <li><a id="terms" href="#">Terms</a></li>
+                <li><a id="settings" href="#">Settings</a></li>
             </ul>
-        </div>>
+        </div>
     </div>
 </body>
 </html>
