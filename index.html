@@ -5,21 +5,30 @@
     html, body {
         width: 100%;
         height: 70%;
+        margin: 0;
     }
     .middle {
         min-height: 100%;
         display: grid;
         grid-template-rows: auto 1fr auto;
         grid-template-columns: 100%;
+    }
+    #logo {
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
     }   
-    .bar {
+    #bar {
         display: flex;
         margin: 0 auto;
         margin-top: 30px;
         height: 40px;
         border-radius: 25px;
-        width: 470px;
+        width: 570px;
         border: 1px solid rgb(204, 201, 201);
+    }
+    #bar:hover {
+        box-shadow: 2px 2px 2px 2px rgba(187, 186, 186, 0.24), 1px 1px 1px 1px rgba(59, 59, 59, 0.24); 
     }
     .buttons {
         display: flex;
@@ -36,30 +45,41 @@
         padding: 10px 15px 10px 15px;
         background-color:rgb(240, 239, 239)     
     }
-    .between-top {
+    #google-search:hover,
+    #lucky:hover {
+        box-shadow: 1px 1px 1px 0px rgba(8, 8, 8, 0.24), 1px 1px 1px 1px rgba(8, 8, 8, 0.24);
+    }
+    .between-top,
+    .between-bottom {
         display: flex;
         flex-grow: 1;
     }
     .between-buttons {
         width: 15px;
     }
-    .between-bottom {
+    .nav-top ul {
         display: flex;
-        flex-grow: 1;
+        justify-content: flex-end;
     }
-    #logo {
-        display: flex;
-        justify-content: center;
-        margin-top: 100px;
+    .nav-top li {
+        margin: 5px 10px auto 10px;
     }
-    .about,
-    .store,
-    .gmail, 
-    .images, 
+    #about:hover,
+    #store:hover,
+    #gmail:hover,
+    #images:hover,
+    .nav-bottom li:hover {
+        text-decoration: underline;
+    }
+
+    #about,
+    #store,
+    #gmail, 
+    #images, 
     .nav-bottom li{
         margin-top: 5px;
         font-size: 12px;
-        color: black;
+        color: rgb(53, 52, 52);
         font-family: Arial, Helvetica, sans-serif;
         text-decoration: none;
     }
@@ -74,26 +94,14 @@
         border: none;
         padding: 7px 11px 7px 11px;
     }
-    .nav-top ul {
-        display: flex;
-        justify-content: flex-end;
-    }
-    .nav-top li {
-        margin: 5px 10px auto 10px;
-    }
     .nav-bottom ul {
         display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        background-color: rgb(240, 236, 236);
-        padding: 10px 10px;
-    }
-    .nav-top li,
-    .nav-bottom li {
-        display: flex;
-        flex-direction:row;
-        color: black;
-        font-size: 13px;
+        position: fixed;
+        padding: 10px 0 10px 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color:rgb(243, 240, 240);
     }
     #advertising, 
     #business, 
@@ -101,13 +109,23 @@
     #privacy,
     #terms,
     #settings {
-        display: flex;
         margin-left: 10px;
         margin-right: 10px;
         font-size: 14px;
         color: rgb(95, 94, 94);
         text-decoration: none;
-    }   
+    }
+    #advertising {
+        margin-left: 25px;
+    }
+    #settings {
+        margin-right: 25px;
+    }
+    .nav-top li,
+    .nav-bottom li {
+        display: flex;
+        position: relative;
+    }
 </style>
     <meta charset="UTF-8">
     <title>Google</title>
@@ -115,11 +133,11 @@
 <body>
     <div class="nav-top">
         <ul>
-            <li><a class="about" href="#">About</a></li>
-            <li><a class="store" href="#">Store</a></li>
+            <li><a id="about" href="#">About</a></li>
+            <li><a id="store" href="#">Store</a></li>
             <div class="between-top"></div>
-            <li><a class="gmail" href="#">Gmail</a></li>
-            <li><a class ="images" href="#">Images</a></li>
+            <li><a id="gmail" href="#">Gmail</a></li>
+            <li><a id="images" href="#">Images</a></li>
             <li><a href="#"><img id="apps" src="apps_black_24dp.svg"></a></li>
             <li><button id="sign-in" type="button">Sign in</button></li>
         </ul>
@@ -130,8 +148,8 @@
             <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google logo">
         </div>
         
-        <div class="search-bar">
-            <input class="bar" type="text" title="Search">
+        <div>
+            <input id="bar" type="text" title="Search">
         </div>
 
         <div class="buttons">
